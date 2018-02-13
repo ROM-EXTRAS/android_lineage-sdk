@@ -76,4 +76,5 @@ public class LineageMetricsLogger extends MetricsLogger {
     public static final int TILE_ANTI_FLICKER = BASE + 48;
     public static final int GESTURE_ANYWHERE = BASE + 49;
     public static final int PULSE_NAVBAR = BASE + 50;
+    public static final int TILE_ONEHAND_MODE = BASE + 51;
 }
