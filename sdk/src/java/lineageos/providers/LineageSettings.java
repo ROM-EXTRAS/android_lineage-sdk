@@ -375,7 +375,7 @@ public final class LineageSettings {
             new InclusiveIntegerRangeValidator(0, 86400);
 
     private static final Validator sHardwareKeyActionvalidator =
-            new InclusiveIntegerRangeValidator(0, 11);
+            new InclusiveIntegerRangeValidator(0, 18);
 
     private static final Validator sAlwaysTrueValidator = new Validator() {
         @Override
@@ -1109,6 +1109,13 @@ public final class LineageSettings {
          * 9 - Toggle split screen
          * 10 - Kill foreground app
          * 11 - Play/pause music
+         * 12 - Torch
+         * 13 - Screenshot
+         * 14 - Volume Panel
+         * 15 - Clear All Notifications
+         * 16 - Notifications
+         * 17 - Toggle Qs Panel
+         * 18 - Ringer Modes
          */
         public static final String KEY_HOME_LONG_PRESS_ACTION = "key_home_long_press_action";
 
@@ -1267,7 +1274,7 @@ public final class LineageSettings {
 
         /** @hide */
         public static final Validator KEY_THREE_FINGERS_SWIPE_ACTION_VALIDATOR =
-                new InclusiveIntegerRangeValidator(0, 17);
+                new InclusiveIntegerRangeValidator(0, 18);
 
         /**
          * Whether to wake the screen with the home key, the value is boolean.
