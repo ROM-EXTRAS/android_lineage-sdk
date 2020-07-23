@@ -317,17 +317,29 @@ public class NetworkTraffic extends TextView {
             final String unit;
             switch (mUnits) {
                 case UNITS_KILOBITS:
-                    value = String.format("%d", kbps);
-                    unit = mContext.getString(R.string.kilobitspersecond_short);
-                    break;
+                    if (kbps >= 2000) {
+                        value = String.format("%.1f", (float) kbps / 1000);
+                        unit = mContext.getString(R.string.megabitspersecond_short);
+                        break;
+                    } else {
+                        value = String.format("%d", kbps);
+                        unit = mContext.getString(R.string.kilobitspersecond_short);
+                        break;
+                    }
                 case UNITS_MEGABITS:
                     value = String.format("%.1f", (float) kbps / 1000);
                     unit = mContext.getString(R.string.megabitspersecond_short);
                     break;
                 case UNITS_KILOBYTES:
-                    value = String.format("%d", kbps / 8);
-                    unit = mContext.getString(R.string.kilobytespersecond_short);
-                    break;
+                    if (kbps >= 16000) {
+                        value = String.format("%.2f", (float) kbps / 8000);
+                        unit = mContext.getString(R.string.megabytespersecond_short);
+                        break;                        
+                    } else {
+                        value = String.format("%d", kbps / 8);
+                        unit = mContext.getString(R.string.kilobytespersecond_short);
+                        break;
+                    }
                 case UNITS_MEGABYTES:
                     value = String.format("%.2f", (float) kbps / 8000);
                     unit = mContext.getString(R.string.megabytespersecond_short);
