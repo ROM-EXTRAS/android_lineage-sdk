@@ -3159,6 +3159,14 @@ public final class LineageSettings {
         public static final Validator GESTURE_BACK_EXCLUDE_TOP_VALIDATOR =
                 new InclusiveIntegerRangeValidator(0, 50);
 
+        /**
+         * Whether to show or hide the arrow for back gesture
+         * @hide
+         */
+        public static final String HIDE_BACK_ARROW_GESTURE = "hide_back_arrow_gesture";
+
+        private static final Validator HIDE_BACK_ARROW_GESTURE_VALIDATOR = sBooleanValidator;
+
         /** Protected Components
          * @hide
          */
@@ -3474,6 +3482,7 @@ public final class LineageSettings {
         public static final Map<String, Validator> VALIDATORS =
                 new ArrayMap<String, Validator>();
         static {
+            VALIDATORS.put(HIDE_BACK_ARROW_GESTURE, HIDE_BACK_ARROW_GESTURE_VALIDATOR);
             VALIDATORS.put(GESTURE_BACK_EXCLUDE_TOP, GESTURE_BACK_EXCLUDE_TOP_VALIDATOR);
             VALIDATORS.put(PROTECTED_COMPONENTS, PROTECTED_COMPONENTS_VALIDATOR);
             VALIDATORS.put(PROTECTED_COMPONENT_MANAGERS, PROTECTED_COMPONENTS_MANAGER_VALIDATOR);
