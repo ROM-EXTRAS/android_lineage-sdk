@@ -1779,6 +1779,12 @@ public final class LineageSettings {
         public static final Validator LOCKSCREEN_ROTATION_VALIDATOR =
                 sBooleanValidator;
 
+        /** Whether to pulse ambient on new music tracks
+         *
+         * @hide
+         */
+        public static final String PULSE_ON_NEW_TRACKS = "pulse_on_new_tracks";
+
         /**
          * Whether to use gesture anywhere feature.
          * 0 = 0ff, 1 = on
