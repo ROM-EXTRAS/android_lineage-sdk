@@ -3219,6 +3219,12 @@ public final class LineageSettings {
         public static final String LOCKSCREEN_MEDIA_METADATA = "lockscreen_media_metadata";
 
         /**
+         * media artwork wallpaper blur level on lockscreen
+         * @hide
+         */
+        public static final String LOCKSCREEN_MEDIA_BLUR = "lockscreen_media_blur";
+
+        /**
          * Whether to have translucent background on lockscreen notifications
          * @hide
          */
@@ -3280,12 +3286,6 @@ public final class LineageSettings {
          */
         @Deprecated
         public static final String LINEAGE_SETUP_WIZARD_COMPLETED = "lineage_setup_wizard_completed";
-
-        /**
-         * Whether lock screen bluring is enabled on devices that support this feature
-         * @hide
-         */
-        public static final String LOCK_SCREEN_BLUR_ENABLED = "lock_screen_blur_enabled";
 
         /**
          * Whether to display weather information on the lock screen
