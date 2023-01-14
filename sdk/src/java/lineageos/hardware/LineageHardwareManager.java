@@ -790,6 +790,7 @@ public final class LineageHardwareManager {
             if (isSupportedHIDL(FEATURE_TOUCHSCREEN_GESTURES)) {
                 ITouchscreenGesture touchscreenGesture = (ITouchscreenGesture)
                         mHIDLMap.get(FEATURE_TOUCHSCREEN_GESTURES);
+                        Log.d("DF32", "Gesture retrieved through Java" + touchscreenGesture.getSupportedGestures());
                 return HIDLHelper.fromHIDLGestures(touchscreenGesture.getSupportedGestures());
             }
         } catch (RemoteException e) {
@@ -803,6 +804,7 @@ public final class LineageHardwareManager {
     public boolean setTouchscreenGestureEnabled(
             TouchscreenGesture gesture, boolean state) {
         try {
+            Log.d("DF32", "Gesture state changed through Java" + gesture);
             if (isSupportedHIDL(FEATURE_TOUCHSCREEN_GESTURES)) {
                 ITouchscreenGesture touchscreenGesture = (ITouchscreenGesture)
                         mHIDLMap.get(FEATURE_TOUCHSCREEN_GESTURES);
