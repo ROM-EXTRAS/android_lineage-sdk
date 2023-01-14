@@ -805,12 +805,14 @@ public final class LineageHardwareManager {
             TouchscreenGesture gesture, boolean state) {
         try {
             Log.d("DF32", "Gesture state changed through Java" + gesture);
+            Log.d("DF32", "Gesture this.id " + gesture.id + " this.name: " + gesture.name + " this.keycode " + gesture.keycode + " state " + state);
             if (isSupportedHIDL(FEATURE_TOUCHSCREEN_GESTURES)) {
                 ITouchscreenGesture touchscreenGesture = (ITouchscreenGesture)
                         mHIDLMap.get(FEATURE_TOUCHSCREEN_GESTURES);
                 return touchscreenGesture.setGestureEnabled(
                         HIDLHelper.toHIDLGesture(gesture), state);
             }
+            Log.d("DF32", "Gesture unsupported!");
         } catch (RemoteException e) {
         }
         return false;
